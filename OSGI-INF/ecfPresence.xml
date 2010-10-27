@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.eclipse.e4.opensocial.container.osapi">
+   <implementation class="org.eclipse.e4.opensocial.container.osapi.internal.EcfPresence"/>
+   <reference bind="addPresenceService" cardinality="1..n" interface="org.eclipse.ecf.presence.service.IPresenceService" name="IPresenceService" policy="dynamic" unbind="removePresenceService"/>
+   <reference cardinality="1..1" interface="org.osgi.service.http.HttpService" name="httpService" policy="static"/>
+</scr:component>

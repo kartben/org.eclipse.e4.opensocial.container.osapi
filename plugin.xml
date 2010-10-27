@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.e4.opensocial.container.features">
+      <feature
+            name="osapi"
+            version="1.0">
+        <dependsOn
+              feature="core">
+        </dependsOn>
+        <script
+        	  source="js/osapi/osapi-request.js">
+        </script>
+        <script
+        	  source="js/osapi/osapi-batch.js">
+        </script>
+        <script
+              source="js/osapi/osapi-http.js">
+        </script>
+        <script
+              source="js/osapi/osapi.js">
+        </script>
+        <browserRPCHandler
+              class="org.eclipse.e4.opensocial.container.osapi.internal.OsapiPeopleGetHandler"
+              name="osapi.people.get">
+        </browserRPCHandler>
+      </feature>
+   </extension>
+
+</plugin>
